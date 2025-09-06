@@ -162,9 +162,30 @@ if __name__ == '__main__':
 
 **Шаг 4.** Проверьте module на исполняемость локально.
 
+<img width="1087" height="175" alt="image" src="https://github.com/user-attachments/assets/b18e5a01-cea4-4755-adc1-ed3f483f6233" />
+
+
 **Шаг 5.** Напишите single task playbook и используйте module в нём.
 
+```
+---
+- name: Local Test
+  hosts: localhost
+  tasks:
+    - name: Call test module
+      my_own_module: 
+        path: /tmp/ansible_test
+        content: test message
+```
+
+<img width="1092" height="486" alt="image" src="https://github.com/user-attachments/assets/3f22eaf0-b1ae-4fb8-8269-278b4e5f2d0d" />
+
+
 **Шаг 6.** Проверьте через playbook на идемпотентность.
+
+<img width="1090" height="486" alt="image" src="https://github.com/user-attachments/assets/63f468de-ec8b-42d6-8fe6-9a41f0ae4b45" />
+
+
 
 **Шаг 7.** Выйдите из виртуального окружения.
 
@@ -184,9 +205,18 @@ if __name__ == '__main__':
 
 **Шаг 15.** Установите collection из локального архива: `ansible-galaxy collection install <archivename>.tar.gz`.
 
+<img width="925" height="245" alt="image" src="https://github.com/user-attachments/assets/e807f3af-3871-4c86-8395-dc26af9d6b86" />
+
+
 **Шаг 16.** Запустите playbook, убедитесь, что он работает.
 
+<img width="928" height="635" alt="image" src="https://github.com/user-attachments/assets/e7920cc9-d9e9-486d-b9a5-bb9884d8fbb7" />
+
+
 **Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
+
+[Архив](https://github.com/Nightnek/ansible-06-module_hw/blob/main/my_own_namespace-yandex_cloud_elk-1.0.0.tar.gz)
+[Collection](https://github.com/Nightnek/ansible-06-module_hw/tree/main/my_own_collection)
 
 ## Необязательная часть
 
