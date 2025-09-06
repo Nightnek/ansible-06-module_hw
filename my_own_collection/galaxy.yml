@@ -1,0 +1,17 @@
+namespace: my_own_namespace
+
+name: yandex_cloud_elk
+
+version: 1.0.0
+
+readme: README.md
+
+authors:
+- Grigory Stasenko
+
+
+description: 
+- This module allows you to create a file on the remote host at a specified path with content provided by the user.
+- If the file already exists and contains the same content, the module does nothing.
+- If the file exists but the content differs, it will overwrite the file with the new content.
+- The module supports check mode, allowing you to simulate changes without actually making them.
